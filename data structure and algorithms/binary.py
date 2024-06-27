@@ -5,17 +5,34 @@ query = 7
 output = 3
 
 def locate_card(cards, query):
-    pass
+    # create  a var(pos) as 0
+    pos = 0
+    
+    #set up a loop for repitation
+    while True:
+        
+        #check if element at te current position match the query
+        if cards[pos] == query:
+            #Answer! return and exit
+            return pos
+        
+        #if it isn't increment the position
+        pos += 1
+        
+        #check if we have reached the end of the array
+        if pos == len(cards):
+            # when number not found
+            return -1
 
 #lets make as dictionary
 tests = list()
-tests.append ( {
+tests1 ={
     'input' :{
         'cards' : [13,12,10,7,4,3,1,0],
         'query' : 7
     },
     'output' : 3
-})
+}
 #expecting result
 # locate_card(test['input']['card'], test['input']['query']) == test['output']
 
@@ -88,4 +105,5 @@ tests.append({
     'output' : 4
 })
 
-print(tests)
+result = locate_card(tests1['input']['cards'],tests1['input']['query'])
+print(result)
