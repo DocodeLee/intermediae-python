@@ -39,8 +39,8 @@
 # print(i)
 
 #-------------
-setA = {1,2,3,4,5,6,7,8,9}
-setB = {1,2,3,10,11,12}
+# setA = {1,2,3,4,5,6,7,8,9}
+# setB = {1,2,3,10,11,12}
 
 # diff = setA.difference(setB) #get the different 
 # print(diff)
@@ -57,5 +57,23 @@ setB = {1,2,3,10,11,12}
 # print(setA)
 
 # setA.issubset(setB) # checking the all the element is in set B
+## superset() is only true when all the element is there
 
-print(setA.issuperset(setB))
+#------------------------------
+# setA = {1,2,3,4,5}
+# setB = {1,2,3}
+# setC = {8,9}
+# print(setA.isdisjoint(setC)) # if no relation will be true
+
+#-------------
+# setA = {1,2,3,4,5}
+# setB = setA
+# setB.add(7)
+# print(setA) # the result change all around
+
+## use copy or / setB = set(setA)
+
+# a = frozenset([1,2,3,4])
+# a.add (2) # you cannot add to frozenset
+
+
