@@ -132,6 +132,27 @@ class AndGate(BinaryGate):
             return 0
         else:
             print("insert only 0 or 1")
+            
+class Halfadd(BinaryGate):
+    def __init__(self,n):
+        super(Halfadd,self).__init__(n)
+        self.c = 0
+    
+    def performGateLogic(self):
+        
+        a = self.getPinA()
+        b = self.getPinB()
+        
+        if a == 0 and b == 0:
+            return 0 , self.c == 0
+        elif a ==0 and b == 1:
+            return 1 ,self.c == 0
+        elif a ==1 and b == 0 :
+            return 1, self.c == 0
+        elif a ==1 and b == 1 :
+            return 0, self.c == 1
+        else:
+            print("Insert only 0 or 1")
 
 class OrGate(BinaryGate):
     def __init__(self,n):
@@ -195,4 +216,6 @@ def main():
     c3 = Connector(g3,g4)
     print()
     
-main()
+
+g5 = Halfadd(" G5")
+s
