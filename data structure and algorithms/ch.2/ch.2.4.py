@@ -76,4 +76,3 @@ def ana_4(s1, s2) :
 
 print(ana_4("apple", "pleap"))  # expected: True
 
-print(10//2)

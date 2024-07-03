@@ -51,3 +51,5 @@ for i in range(1_000_000, 100_000_001, 1_000_000):
     print(f"{i:<10d}{pop_zero_t:>15.5f}{pop_end_t:>15.5f}")
     # pop() shows steady speed O(1)
     # pop(0) : O(n)
+    
+    list.index()
